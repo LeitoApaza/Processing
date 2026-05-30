@@ -1,4 +1,4 @@
-//Estructura de Class Movil
+
 
 class Movil {
   PVector pos, vel;
