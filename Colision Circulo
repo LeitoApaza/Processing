@@ -1,0 +1,31 @@
+float x = 100;
+float y = 100;
+
+void setup() {
+  size(600, 400);
+}
+
+void draw() {
+  background(220);
+
+  // Rectángulo
+  if (x > 200 && x < 400 && y > 150 && y < 250) {
+    fill(255, 0, 0);
+  } else {
+    fill(0, 255, 0);
+  }
+
+  rect(200, 150, 200, 100);
+
+  // Círculo
+  fill(0, 0, 255);
+  ellipse(x, y, 40, 40);
+
+  // Movimiento
+  if (keyPressed) {
+    if (keyCode == RIGHT) x += 3;
+    if (keyCode == LEFT) x -= 3;
+    if (keyCode == UP) y -= 3;
+    if (keyCode == DOWN) y += 3;
+  }
+}
